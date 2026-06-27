@@ -9,95 +9,204 @@
   --surface:#16161a;
   --surface2:#1d1d22;
   --line:#2a2a30;
-  --red:#e23b3b;
+  --red:#ED2738;
   --red-dim:#7a2424;
-  --navy:#1c2a44;
-  --gold:#e8a93c;
   --text:#f2f1ec;
   --muted:#9b9aa3;
   --mono: 'Courier New', monospace;
 }
 *{box-sizing:border-box;}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial, Helvetica, sans-serif;line-height:1.55;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.55;
+}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px 120px;}
-.hero{position:relative;padding:90px 24px 70px;background:linear-gradient(180deg, rgba(12,12,14,0) 0%, var(--bg) 90%),repeating-linear-gradient(135deg, rgba(226,59,59,0.07) 0 2px, transparent 2px 26px),var(--navy);border-bottom:3px solid var(--red);text-align:center;}
-.hero .eyebrow{font-family:var(--mono);letter-spacing:.25em;font-size:12px;color:var(--gold);text-transform:uppercase;margin-bottom:18px;}
-.hero h1{font-size:clamp(34px,6vw,64px);font-weight:900;letter-spacing:-0.01em;margin:0 0 14px;text-transform:uppercase;font-stretch:condensed;}
+
+/* HERO */
+.hero{
+  position:relative;
+  padding:90px 24px 70px;
+  background:
+    linear-gradient(180deg, rgba(12,12,14,0) 0%, var(--bg) 90%),
+    repeating-linear-gradient(135deg, rgba(226,59,59,0.07) 0 2px, transparent 2px 26px),
+    #000000;
+  border-bottom:3px solid var(--red);
+  text-align:center;
+}
+.hero .eyebrow{
+  font-family:var(--mono);
+  letter-spacing:.25em;
+  font-size:12px;
+  color:var(--red);
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(34px,6vw,64px);
+  font-weight:900;
+  letter-spacing:-0.01em;
+  margin:0 0 14px;
+  text-transform:uppercase;
+  font-stretch:condensed;
+}
 .hero h1 span{color:var(--red);}
 .hero p{max-width:640px;margin:0 auto;color:var(--muted);font-size:16px;}
-.hero .versus{display:flex;justify-content:center;gap:18px;margin-top:30px;flex-wrap:wrap;}
-.tag{border:1px solid var(--line);background:var(--surface);padding:8px 16px;border-radius:3px;font-size:13px;color:var(--text);}
+.hero .versus{
+  display:flex;justify-content:center;gap:18px;margin-top:30px;flex-wrap:wrap;
+}
+.tag{
+  border:1px solid var(--line);
+  background:var(--surface);
+  padding:8px 16px;border-radius:3px;
+  font-size:13px;color:var(--text);
+}
 .tag b{color:var(--red);}
-nav.toc{position:sticky;top:0;z-index:10;background:rgba(12,12,14,0.95);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);overflow-x:auto;white-space:nowrap;padding:12px 24px;}
-nav.toc a{color:var(--muted);font-size:12px;text-decoration:none;margin-right:18px;text-transform:uppercase;letter-spacing:.05em;font-family:var(--mono);}
+
+/* NAV */
+nav.toc{
+  position:sticky;top:0;z-index:10;
+  background:rgba(12,12,14,0.95);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(6px);
+  overflow-x:auto;
+  white-space:nowrap;
+  padding:12px 24px;
+}
+nav.toc a{
+  color:var(--muted);font-size:12px;text-decoration:none;
+  margin-right:18px;text-transform:uppercase;letter-spacing:.05em;
+  font-family:var(--mono);
+}
 nav.toc a:hover{color:var(--red);}
+
+/* SECTIONS */
 section{padding:64px 0;border-bottom:1px solid var(--line);}
 section:last-of-type{border-bottom:none;}
-.kicker{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;}
-h2{font-size:30px;font-weight:900;text-transform:uppercase;margin:0 0 8px;border-left:6px solid var(--red);padding-left:14px;}
+.kicker{
+  font-family:var(--mono);font-size:12px;color:var(--red);
+  letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;
+}
+h2{
+  font-size:30px;font-weight:900;text-transform:uppercase;margin:0 0 8px;
+  border-left:6px solid var(--red);padding-left:14px;
+}
 h3{font-size:18px;color:var(--red);margin:28px 0 10px;text-transform:uppercase;letter-spacing:.03em;}
 p.lead{color:var(--muted);max-width:760px;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px;}
 @media(max-width:760px){.grid2{grid-template-columns:1fr;}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px 22px;}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px 22px;
+}
 .card h4{margin:0 0 6px;color:var(--text);font-size:15px;text-transform:uppercase;letter-spacing:.03em;}
-.card .role{color:var(--gold);font-size:12px;font-family:var(--mono);margin-bottom:10px;display:block;}
+.card .role{color:#ffffff;font-size:12px;font-family:var(--mono);margin-bottom:10px;display:block;}
 .card ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14px;}
 .card ul li{margin-bottom:4px;}
+.cta-line{
+  margin-top:10px;font-size:13px;color:var(--red);font-weight:bold;
+}
+
 table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px;}
 th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
-th{background:var(--surface2);color:var(--gold);font-family:var(--mono);font-size:12px;text-transform:uppercase;}
+th{background:var(--surface2);color:#ffffff;font-family:var(--mono);font-size:12px;text-transform:uppercase;}
 td{color:var(--muted);}
 tr:nth-child(even) td{background:rgba(255,255,255,0.015);}
-.badge-prize{display:inline-block;background:var(--gold);color:#1a1304;font-weight:bold;font-size:11px;padding:3px 9px;border-radius:3px;letter-spacing:.04em;text-transform:uppercase;}
-.caption-box{background:#0f0f12;border:1px dashed var(--line);border-radius:6px;padding:16px 18px;font-size:13.5px;color:#cfcfd4;margin-top:10px;white-space:pre-wrap;font-family:var(--mono);}
+
+.caption-box{
+  background:#0f0f12;border:1px dashed var(--line);border-radius:6px;
+  padding:16px 18px;font-size:13.5px;color:#cfcfd4;margin-top:10px;white-space:pre-wrap;
+  font-family:var(--mono);
+}
+.caption-box .lbl{color:var(--red);font-size:11px;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em;}
+
 .flow{display:flex;gap:10px;overflow-x:auto;margin-top:20px;padding-bottom:6px;}
-.flow .step{min-width:140px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;flex:0 0 auto;}
+.flow .step{
+  min-width:140px;background:var(--surface);border:1px solid var(--line);border-radius:6px;
+  padding:14px;flex:0 0 auto;
+}
 .flow .step .t{font-family:var(--mono);color:var(--red);font-size:12px;margin-bottom:6px;font-weight:bold;}
 .flow .step ul{margin:0;padding-left:16px;font-size:12.5px;color:var(--muted);}
 .flow .arrow{align-self:center;color:var(--line);font-size:20px;}
+
 .swatch-row{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap;}
 .swatch{width:120px;}
 .swatch .box{height:60px;border-radius:5px;border:1px solid var(--line);}
 .swatch .lab{font-size:11.5px;color:var(--muted);margin-top:6px;}
+
+/* MOCKUP */
 .mockup-wrap{display:flex;gap:36px;flex-wrap:wrap;justify-content:center;margin-top:30px;}
-.phone{width:320px;background:#000;border:3px solid #2c2c30;border-radius:32px;padding:10px;box-shadow:0 30px 60px rgba(0,0,0,0.5);}
-.phone .screen{background:#000;border-radius:22px;overflow:hidden;font-size:12px;}
+.phone{
+  width:320px;background:#000;border:3px solid #2c2c30;border-radius:32px;padding:10px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.5);
+}
+.phone .screen{
+  background:#000;border-radius:22px;overflow:hidden;font-size:12px;
+}
 .ig-top{display:flex;align-items:center;gap:6px;padding:10px 12px;color:#fff;font-weight:bold;font-size:14px;border-bottom:1px solid #222;}
 .ig-profile{display:flex;padding:14px 12px;gap:14px;align-items:center;}
-.ig-avatar{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 30% 30%, var(--red), var(--navy) 70%);border:2px solid var(--gold);flex:0 0 auto;}
+.ig-avatar{
+  width:64px;height:64px;border-radius:50%;background:
+    radial-gradient(circle at 30% 30%, var(--red), #000 70%);
+  border:2px solid var(--red);flex:0 0 auto;
+}
 .ig-stats{display:flex;gap:16px;color:#fff;}
 .ig-stats div{text-align:center;}
 .ig-stats div b{display:block;font-size:14px;}
 .ig-stats div span{color:#9a9aa0;font-size:10.5px;}
 .ig-bio{padding:0 12px 8px;color:#eee;font-size:11.5px;line-height:1.5;}
 .ig-bio b{color:#fff;}
-.ig-bio .cta-btn{display:inline-block;margin-top:8px;background:var(--red);color:#fff;font-weight:bold;padding:6px 14px;border-radius:5px;font-size:11px;}
+.ig-bio .cta-btn{
+  display:inline-block;margin-top:8px;background:var(--red);color:#fff;font-weight:bold;
+  padding:6px 14px;border-radius:5px;font-size:11px;
+}
 .ig-highlights{display:flex;gap:10px;padding:10px 12px;overflow-x:auto;}
-.ig-highlights .h{text-align:center;flex:0 0 auto;width:54px;}
-.ig-highlights .h .circ{width:50px;height:50px;border-radius:50%;border:1.5px solid var(--gold);background:linear-gradient(160deg,#222,#000);margin:0 auto;}
+.ig-highlights .h{
+  text-align:center;flex:0 0 auto;width:54px;
+}
+.ig-highlights .h .circ{
+  width:50px;height:50px;border-radius:50%;border:1.5px solid var(--red);
+  background:linear-gradient(160deg,#222,#000);margin:0 auto;
+}
 .ig-highlights .h .lab{color:#ccc;font-size:9.5px;margin-top:4px;}
 .ig-tabs{display:flex;border-top:1px solid #222;border-bottom:1px solid #222;}
 .ig-tabs div{flex:1;text-align:center;padding:8px 0;color:#666;font-size:13px;}
 .ig-tabs div.active{color:#fff;border-bottom:2px solid #fff;}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#000;}
-.ig-grid .cell{aspect-ratio:1/1;position:relative;display:flex;align-items:center;justify-content:center;padding:6px;text-align:center;font-size:9.5px;color:#fff;font-weight:bold;line-height:1.2;text-transform:uppercase;}
-.cell.calendar{background:linear-gradient(150deg,var(--navy),#0c0c0e);}
+.ig-grid .cell{
+  aspect-ratio:1/1;position:relative;display:flex;align-items:center;justify-content:center;
+  padding:6px;text-align:center;font-size:9.5px;color:#fff;font-weight:bold;line-height:1.2;
+  text-transform:uppercase;
+}
+.cell.calendar{background:linear-gradient(150deg,#2a2a30,#0c0c0e);}
+.cell.tourn{background:linear-gradient(150deg,var(--red-dim),#1a0808);}
 .cell.atmo{background:linear-gradient(150deg,#26262c,#0c0c0e);}
-.cell.join{background:linear-gradient(150deg,var(--navy),var(--red-dim));}
-.cell.winner{background:linear-gradient(150deg,var(--gold),#3a2a08);color:#1a1304;}
+.cell.join{background:linear-gradient(150deg,#2a2a30,var(--red-dim));}
+.cell.winner{background:linear-gradient(150deg,#ffffff,#b8b8b8);color:#000000;}
 .cell.announce{background:linear-gradient(150deg,var(--red),#1a0808);}
 .cell.faq{background:linear-gradient(150deg,#26262c,#1a1a20);}
-.cell.lan{background:linear-gradient(150deg,#0c0c0e,var(--navy));}
-.cell.prize{background:linear-gradient(150deg,var(--gold),var(--red-dim));color:#1a1304;}
-.cell .tagmini{position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.5);font-size:7px;padding:1px 4px;border-radius:2px;}
+.cell.lan{background:linear-gradient(150deg,#0c0c0e,#2a2a30);}
+.cell.trend{background:linear-gradient(150deg,var(--red),#000);}
+.cell.reel{background:linear-gradient(150deg,#ffffff,#2a2a30);color:#000000;}
+.cell .tagmini{
+  position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.5);font-size:7px;padding:1px 4px;border-radius:2px;
+}
+
 .mockup-legend{max-width:320px;}
-.mockup-legend .li{display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:var(--muted);}
-.mockup-legend .num{width:22px;height:22px;border-radius:4px;background:var(--surface2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-family:var(--mono);flex:0 0 auto;}
+.mockup-legend .li{
+  display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:var(--muted);
+}
+.mockup-legend .num{
+  width:22px;height:22px;border-radius:4px;background:var(--surface2);color:#ffffff;
+  display:flex;align-items:center;justify-content:center;font-size:11px;font-family:var(--mono);flex:0 0 auto;
+}
+
 footer{padding:50px 24px;text-align:center;color:var(--muted);font-size:12px;font-family:var(--mono);}
 </style>
 </head>
 <body>
+
 <div class="hero">
   <div class="eyebrow">Strategic Proposal · Social Media Restructuring</div>
   <h1>Friendly Fire<br><span>Instagram System</span></h1>
@@ -108,56 +217,333 @@ footer{padding:50px 24px;text-align:center;color:var(--muted);font-size:12px;fon
     <div class="tag">Бенчмарк: <b>cyberion.ua</b></div>
   </div>
 </div>
+
 <nav class="toc">
-  <a href="#summary">Summary</a><a href="#diagnosis">Діагноз</a><a href="#bio">Bio</a><a href="#highlights">Highlights</a><a href="#pinned">Pinned</a><a href="#posts">Типи постів</a><a href="#captions">Captions</a><a href="#stories">Stories</a><a href="#visual">Візуальна система</a><a href="#prizes">Призи</a><a href="#lugner">Lugner</a><a href="#millennium">Millennium</a><a href="#mockup">Mockup</a>
+  <a href="#summary">Summary</a>
+  <a href="#diagnosis">Діагноз</a>
+  <a href="#bio">Bio</a>
+  <a href="#highlights">Highlights</a>
+  <a href="#pinned">Pinned</a>
+  <a href="#posts">Типи постів</a>
+  <a href="#captions">Captions</a>
+  <a href="#stories">Stories</a>
+  <a href="#visual">Візуальна система</a>
+  <a href="#lugner">Lugner</a>
+  <a href="#millennium">Millennium</a>
+  <a href="#mockup">Mockup</a>
 </nav>
+
 <div class="wrap">
-<section id="summary"><div class="kicker">01 / Executive Summary</div><h2>Суть пропозиції</h2><p class="lead">Обидві сторінки вже мають турнірний контент — проблема не в його відсутності, а в тому, що він не зібраний у систему. Користувач бачить афішу турніру, але не бачить шлях: коли наступний, як зареєструватися, які правила, хто виграв минулого разу. Це і є робота Instagram на цьому етапі: не продавати напряму, а зняти невизначеність першого контакту й привести людину до простої дії — написати в DM, прийти, зареєструватися.</p><p class="lead">Рішення — однакова архітектура для обох локацій (bio → highlights → pinned → grid → stories), де турніри виглядають як регулярна система: анонс → реєстрація → правила → live-моменти → переможці → наступний турнір.</p></section>
-<section id="diagnosis"><div class="kicker">02 / Поточний стан</div><h2>Діагноз</h2><table><tr><th>Параметр</th><th>Lugner City</th><th>Millennium City</th></tr><tr><td>Обсяг</td><td>~113 постів, ~900+ підписників</td><td>~454 пости, ~2.2k підписників</td></tr><tr><td>Highlights</td><td>Розвинені за іграми: Fortnite, Vibe, CS2, Valorant, Boni, LAN, Grand Opening</td><td>Слабкі: лише Boni, Grand Opening — немає навігації по турнірах і правилах</td></tr><tr><td>Перший екран</td><td>Потребує системності</td><td>Вже є сильні турнірні візуали (Juni Turniere, Rocket League, Fortnite)</td></tr><tr><td>Турнірний контент</td><td>Є, але виглядає як набір окремих постів, а не серія</td><td>Те саме — немає visible tournament series</td></tr><tr><td>Головний ризик</td><td>Менша аудиторія — потрібна якісна навігація, щоб конвертувати тих, хто вже зайшов</td><td>Велика аудиторія "втрачається" через відсутність навігації — це найбільша точка втрати</td></tr></table><p class="lead" style="margin-top:14px;font-size:13px;">Примітка: цифри підписників і постів — орієнтовні, на основі візуального аудиту профілів; не підтверджені аналітикою Meta.</p></section>
-<section id="bio"><div class="kicker">03 / Bio</div><h2>Структура bio</h2><p class="lead">Коротко, action-oriented, без зайвих емодзі-стін. Чотири рядки: хто ми → що тут є → для кого → що зробити зараз.</p><div class="grid2"><div class="card"><span class="role">Lugner City · EN</span><div class="caption-box">Gaming Arena Vienna | Lugner City
+
+<section id="summary">
+  <div class="kicker">01 / Executive Summary</div>
+  <h2>Суть пропозиції</h2>
+  <p class="lead">
+  Обидві сторінки вже мають турнірний контент — проблема не в його відсутності, а в тому, що він не зібраний у систему. Користувач бачить афішу турніру, але не бачить шлях: коли наступний, як зареєструватися, які правила, хто виграв минулого разу. Це і є робота Instagram на цьому етапі: не продавати напряму, а зняти невизначеність першого контакту й привести людину до простої дії — написати в DM, прийти, зареєструватися.
+  </p>
+  <p class="lead">
+  Рішення — однакова архітектура для обох локацій (bio → highlights → pinned → grid → stories), де турніри виглядають як регулярна система: анонс → реєстрація → правила → live-моменти → переможці → наступний турнір.
+  </p>
+</section>
+
+<section id="diagnosis">
+  <div class="kicker">02 / Поточний стан</div>
+  <h2>Діагноз</h2>
+  <table>
+    <tr><th>Параметр</th><th>Lugner City</th><th>Millennium City</th></tr>
+    <tr><td>Обсяг</td><td>~113 постів, ~900+ підписників</td><td>~454 пости, ~2.2k підписників</td></tr>
+    <tr><td>Highlights</td><td>Розвинені за іграми: Fortnite, Vibe, CS2, Valorant, Boni, LAN, Grand Opening</td><td>Слабкі: лише Boni, Grand Opening — немає навігації по турнірах і правилах</td></tr>
+    <tr><td>Перший екран</td><td>Потребує системності</td><td>Вже є сильні турнірні візуали (Juni Turniere, Rocket League, Fortnite)</td></tr>
+    <tr><td>Турнірний контент</td><td>Є, але виглядає як набір окремих постів, а не серія</td><td>Те саме — немає visible tournament series</td></tr>
+    <tr><td>Головний ризик</td><td>Менша аудиторія — потрібна якісна навігація, щоб конвертувати тих, хто вже зайшов</td><td>Велика аудиторія "втрачається" через відсутність навігації — це найбільша точка втрати</td></tr>
+  </table>
+  <p class="lead" style="margin-top:14px;font-size:13px;">Примітка: цифри підписників і постів — орієнтовні, на основі візуального аудиту профілів; не підтверджені аналітикою Meta.</p>
+</section>
+
+<section id="bio">
+  <div class="kicker">03 / Bio</div>
+  <h2>Структура bio</h2>
+  <p class="lead">Коротко, action-oriented, без зайвих емодзі-стін. Чотири рядки: хто ми → що тут є → для кого → що зробити зараз.</p>
+  <div class="grid2">
+    <div class="card">
+      <span class="role">Lugner City · EN</span>
+      <div class="caption-box">Gaming Arena Vienna | Lugner City
 Tournaments · PS5 · High-End PCs
 Solo, with friends or your squad
-👇 Next tournament — DM "TURNIER"</div></div><div class="card"><span class="role">Lugner City · DE</span><div class="caption-box">Gaming Arena Wien | Lugner City
+👇 Next tournament — DM "TURNIER"</div>
+    </div>
+    <div class="card">
+      <span class="role">Lugner City · DE</span>
+      <div class="caption-box">Gaming Arena Wien | Lugner City
 Turniere · PS5 · High-End PCs
 Allein, mit Freunden oder Squad
-👇 Nächstes Turnier — DM "TURNIER"</div></div><div class="card"><span class="role">Millennium City · EN</span><div class="caption-box">Gaming Arena Vienna | Millennium City
+👇 Nächstes Turnier — DM "TURNIER"</div>
+    </div>
+    <div class="card">
+      <span class="role">Millennium City · EN</span>
+      <div class="caption-box">Gaming Arena Vienna | Millennium City
 Tournaments · PS5 · High-End PCs
 Play solo or bring your squad
-👇 This week's tournament — DM "TURNIER"</div></div><div class="card"><span class="role">Millennium City · DE</span><div class="caption-box">Gaming Arena Wien | Millennium City
+👇 This week's tournament — DM "TURNIER"</div>
+    </div>
+    <div class="card">
+      <span class="role">Millennium City · DE</span>
+      <div class="caption-box">Gaming Arena Wien | Millennium City
 Turniere · PS5 · High-End PCs
 Allein oder mit deinem Squad
-👇 Turnier dieser Woche — DM "TURNIER"</div></div></div></section>
-<section id="highlights"><div class="kicker">04 / Highlights Architecture</div><h2>Уніфіковані highlights</h2><p class="lead"><b>Повна версія</b> (для Lugner — додати до ігрових): Turniere · Anmeldung · Kalender · Regeln · Gewinner · Games · LAN · Boni · Location · FAQ.<br><b>Коротка версія</b> (мінімум для Millennium — терміново): Turniere · Join · Games · Winners · Boni · Location.</p><div class="grid2"><div class="card"><h4>Turniere</h4><span class="role">найближчі турніри · головний навігаційний хаб</span><ul><li>1-й слайд: гра + дата + час, без тексту-стіни</li><li>далі: формат, локація, приз, реєстраційна дія</li><li>CTA в кінці: «DM TURNIER, щоб зареєструватись»</li></ul></div><div class="card"><h4>Anmeldung / Join</h4><span class="role">зняти бар'єр першого кроку</span><ul><li>вибери гру → напиши в DM → зареєструйся → прийди</li><li>окремий слайд: «немає команди? приходь — знайдемо тобі гравців на місці»</li></ul></div><div class="card"><h4>Kalender</h4><span class="role">регулярність, не разовість</span><ul><li>місячний overview одним слайдом</li><li>weekly reminder + окремий story на кожну гру</li></ul></div><div class="card"><h4>Regeln</h4><span class="role">прозорість, дружелюбно до новачків</span><ul><li>формат, кількість гравців, entry fee (якщо є)</li><li>пояснення мовою новачка, без жаргону</li></ul></div><div class="card"><h4>Gewinner</h4><span class="role">social proof</span><ul><li>фото переможців + короткий recap + приз + наступний турнір</li><li>завжди закінчується CTA на наступний турнір</li></ul></div><div class="card"><h4>FAQ</h4><span class="role">останній бар'єр перед DM</span><ul><li>можна самому? потрібна команда? новачкам можна?</li><li>скільки коштує? треба бронювати?</li></ul></div></div></section>
-<section id="pinned"><div class="kicker">05 / Pinned Posts</div><h2>3 закріплені пости</h2><div class="grid2"><div class="card"><h4>1. Monthly Tournament Calendar</h4><span class="role">мета: показати регулярність · carousel</span><ul><li>month overview → game list → dates → featured tournament → how to join → CTA</li></ul></div><div class="card"><h4>2. How to Join a Tournament</h4><span class="role">мета: зняти бар'єр першої участі · carousel / Reel</span><ul><li>Choose your game → solo or squad → register via DM → show up, play, win</li></ul></div><div class="card"><h4>3. What is Friendly Fire?</h4><span class="role">мета: пояснити бренд · Reel / carousel</span><ul><li>arena → PS5 / high-end PCs → friends → tournaments → community → location → CTA</li></ul></div></div></section>
-<section id="posts"><div class="kicker">06 / Типи постів</div><h2>6 форматів контенту</h2><table><tr><th>Тип</th><th>Мета</th><th>Формат</th><th>На візуалі</th><th>CTA</th></tr><tr><td>Tournament Announcement</td><td>анонсувати подію</td><td>poster (red/black)</td><td>гра, дата, приз</td><td>DM "TURNIER"</td></tr><tr><td>Tournament Calendar</td><td>показати ритм</td><td>carousel</td><td>weekly grid ігор</td><td>save / DM</td></tr><tr><td>Winner / Recap</td><td>social proof</td><td>фото + caption</td><td>переможці, приз</td><td>next tournament</td></tr><tr><td>Atmosphere Reel</td><td>показати vibe</td><td>Reel, 15–30с</td><td>люди, звук, гра</td><td>«приходь подивитись / зіграти»</td></tr><tr><td>Beginner-Friendly</td><td>знизити бар'єр</td><td>carousel</td><td>пояснення для новачка</td><td>«перший раз? напиши нам»</td></tr><tr><td>Prize / Partner Moment</td><td>показати додатковий стимул участі</td><td>poster + winner photo</td><td><span class="badge-prize">Prize Moment</span></td><td>приз / tournament CTA</td></tr></table></section>
-<section id="captions"><div class="kicker">07 / Caption-формула</div><h2>Універсальна структура</h2><p class="lead">Hook → що відбувається → для кого → дата/час/місце → що отримує учасник → як долучитись → CTA.</p><div class="grid2"><div class="card"><span class="role">Tournament Announcement · EN</span><div class="caption-box">Ready for the next challenge?
+👇 Turnier dieser Woche — DM "TURNIER"</div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights">
+  <div class="kicker">04 / Highlights Architecture</div>
+  <h2>Уніфіковані highlights</h2>
+  <p class="lead"><b>Повна версія</b> (для Lugner — додати до ігрових): Turniere · Anmeldung · Kalender · Regeln · Gewinner · Games · LAN · Boni · Location · FAQ.<br>
+  <b>Коротка версія</b> (мінімум для Millennium — терміново): Turniere · Join · Games · Winners · Boni · Location.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>Turniere</h4><span class="role">найближчі турніри · головний навігаційний хаб</span>
+      <ul>
+        <li>1-й слайд: гра + дата + час, без тексту-стіни</li>
+        <li>далі: формат, локація, умови участі, реєстраційна дія</li>
+        <li>CTA в кінці: «DM TURNIER, щоб зареєструватись»</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Anmeldung / Join</h4><span class="role">зняти бар'єр першого кроку</span>
+      <ul>
+        <li>вибери гру → напиши в DM → зареєструйся → прийди</li>
+        <li>окремий слайд: «немає команди? приходь — знайдемо тобі гравців на місці»</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Kalender</h4><span class="role">регулярність, не разовість</span>
+      <ul>
+        <li>місячний overview одним слайдом</li>
+        <li>weekly reminder + окремий story на кожну гру</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Regeln</h4><span class="role">прозорість, дружелюбно до новачків</span>
+      <ul>
+        <li>формат, кількість гравців, entry fee (якщо є)</li>
+        <li>пояснення мовою новачка, без жаргону</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Gewinner</h4><span class="role">social proof</span>
+      <ul>
+        <li>фото переможців + короткий recap + результат + наступний турнір</li>
+        <li>завжди закінчується CTA на наступний турнір</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>FAQ</h4><span class="role">останній бар'єр перед DM</span>
+      <ul>
+        <li>можна самому? потрібна команда? новачкам можна?</li>
+        <li>скільки коштує? треба бронювати?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pinned">
+  <div class="kicker">05 / Pinned Posts</div>
+  <h2>3 закріплені пости (обов'язково для обох сторінок)</h2>
+  <div class="grid2">
+    <div class="card">
+      <h4>1. Monthly Tournament Calendar</h4><span class="role">мета: показати регулярність · carousel</span>
+      <ul><li>month overview → game list → dates → featured tournament → how to join → CTA</li></ul>
+    </div>
+    <div class="card">
+      <h4>2. How to Join a Tournament</h4><span class="role">мета: зняти бар'єр першої участі · carousel / Reel</span>
+      <ul><li>Choose your game → solo or squad → register via DM → show up, play, win</li></ul>
+    </div>
+    <div class="card">
+      <h4>3. What is Friendly Fire?</h4><span class="role">мета: пояснити бренд · Reel / carousel</span>
+      <ul><li>arena → PS5 / high-end PCs → friends → tournaments → community → location → CTA</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="posts">
+  <div class="kicker">06 / Типи постів</div>
+  <h2>7 форматів контенту</h2>
+  <table>
+    <tr><th>Тип</th><th>Мета</th><th>Формат</th><th>На візуалі</th><th>CTA</th></tr>
+    <tr><td>Tournament Announcement</td><td>анонсувати подію</td><td>poster + Reel cover</td><td>гра, дата, формат, локація</td><td>DM "TURNIER"</td></tr>
+    <tr><td>Tournament Calendar</td><td>показати регулярність</td><td>carousel + Stories</td><td>тижневий/місячний grid ігор</td><td>save / DM</td></tr>
+    <tr><td>Trend / Meme Reel</td><td>дати охоплення і нативність</td><td>Reel, 7-15с</td><td>трендовий звук, staff/players, gaming situation</td><td>follow / share / tag squad</td></tr>
+    <tr><td>Atmosphere Reel</td><td>показати vibe арени</td><td>Reel, 15-30с</td><td>люди, звук, gameplay, емоція</td><td>«приходь подивитись / зіграти»</td></tr>
+    <tr><td>How to Join Reel</td><td>пояснити участь без довгої каруселі</td><td>Reel, 10-20с</td><td>3 кроки: DM → реєстрація → гра</td><td>DM "TURNIER"</td></tr>
+    <tr><td>Winner / Recap Reel</td><td>social proof після події</td><td>Reel + фото carousel за потреби</td><td>переможці, reaction, короткий результат</td><td>next tournament</td></tr>
+    <tr><td>Game Spotlight Reel</td><td>підсвітити конкретну гру</td><td>Reel, 10-20с</td><td>Fortnite / CS2 / Valorant / Rocket League + live clips</td><td>join next game night</td></tr>
+  </table>
+</section>
+
+<section id="captions">
+  <div class="kicker">07 / Caption-формула</div>
+  <h2>Універсальна структура</h2>
+  <p class="lead">Hook → що відбувається → для кого → дата/час/місце → що отримує учасник → як долучитись → CTA.</p>
+  <div class="grid2">
+    <div class="card">
+      <span class="role">Tournament Announcement · EN</span>
+      <div class="caption-box">Ready for the next challenge?
 
 [GAME] tournament is coming to Friendly Fire [LOCATION].
 
 Format: [solo/duo/5v5]
 Date: [date] · Time: [time]
 Location: [Lugner City / Millennium City]
-Prize: [prize / bonus / experience]
 
 Come solo or bring your squad.
-To join: send us "TURNIER" in DM.</div></div><div class="card"><span class="role">Tournament Announcement · DE</span><div class="caption-box">Bereit für die nächste Challenge?
+To join: send us "TURNIER" in DM.</div>
+    </div>
+    <div class="card">
+      <span class="role">Tournament Announcement · DE</span>
+      <div class="caption-box">Bereit für die nächste Challenge?
 
 Das [GAME] Turnier kommt zu Friendly Fire [LOCATION].
 
 Format: [solo/duo/5v5]
 Datum: [date] · Uhrzeit: [time]
 Location: [Lugner City / Millennium City]
-Prize: [prize / bonus / experience]
 
 Komm alleine oder mit deinem Squad.
-Zur Anmeldung: Schreib uns „TURNIER" per DM.</div></div></div></section>
-<section id="stories"><div class="kicker">08 / Stories Flow</div><h2>Промо-цикл одного турніру</h2><div class="flow"><div class="step"><div class="t">T-7</div><ul><li>announcement</li><li>гра, дата</li><li>формат</li></ul></div><div class="arrow">→</div><div class="step"><div class="t">T-5</div><ul><li>правила</li><li>хто може брати участь</li><li>solo/squad</li></ul></div><div class="arrow">→</div><div class="step"><div class="t">T-3</div><ul><li>приз або бонус</li><li>нагадування про формат</li><li>countdown sticker</li></ul></div><div class="arrow">→</div><div class="step"><div class="t">T-1</div><ul><li>last call</li><li>«ще трохи місць»</li><li>DM CTA</li></ul></div><div class="arrow">→</div><div class="step"><div class="t">Event day</div><ul><li>сетап, атмосфера</li><li>учасники, staff</li><li>gameplay clips</li></ul></div><div class="arrow">→</div><div class="step"><div class="t">T+1</div><ul><li>переможці</li><li>recap</li><li>next tournament CTA</li></ul></div></div></section>
-<section id="visual"><div class="kicker">09 / Візуальна система</div><h2>Кольорова логіка та правила</h2><p class="lead">Поточні турнірні афіші вже стилістично "gaming" — темний фон, червоний акцент. Проблема не в стилі, а в нечіткості: незрозуміло, коли і як долучитись. Рішення — закодувати функцію кольором, а не лише настроєм.</p><div class="swatch-row"><div class="swatch"><div class="box" style="background:var(--red)"></div><div class="lab">Red/Black — official tournament announcement</div></div><div class="swatch"><div class="box" style="background:#e9e6dc"></div><div class="lab">Light block — registration / rules / FAQ</div></div><div class="swatch"><div class="box" style="background:var(--navy)"></div><div class="lab">Navy — community / atmosphere proof</div></div><div class="swatch"><div class="box" style="background:#26262c"></div><div class="lab">Dark grey — bracket / scoreboard</div></div><div class="swatch"><div class="box" style="background:var(--gold)"></div><div class="lab">Gold — prize / winners / special event</div></div></div><h3>Правила застосування</h3><ul class="lead"><li>Highlights covers — одна іконка-стиль для всього сету (не змішувати фото з іконками)</li><li>Турнірні афіші — завжди гра + дата на першому плані, приз або бонус — другорядним бейджем, не центром</li><li>Carousel-обкладинки — заголовок одним реченням, без підзаголовків на 1-му слайді</li><li>Winner-пости — завжди людина в кадрі, не лише приз</li><li>Окремий колірний/іконковий маркер для кожної гри, щоб сітка читалась системно</li></ul></section>
-<section id="prizes"><div class="kicker">10 / Prize & Partner Logic</div><h2>Призи та партнери без перевантаження профілю</h2><p class="lead">Якщо в турніру є підтверджений партнер або окремий призовий фонд, це потрібно показувати як додатковий стимул участі, а не як головну тему сторінки. Головний бренд залишається Friendly Fire: арена, ігри, турніри, ком'юніті.</p><div class="grid2"><div class="card"><h4>Де з'являється prize / partner block</h4><ul><li>Badge у кутку турнірних афіш (не на весь слайд)</li><li>Окремий highlight-слайд у "Turniere" та "Gewinner"</li><li>1 з 9 постів у першій сітці (не більше)</li></ul></div><div class="card"><h4>Як не перевантажити</h4><ul><li>Партнер або приз — частина gaming experience, не окрема рекламна врізка</li><li>Призи показуємо в руках переможця, а не на столі як товар</li><li>Максимум 1 окремий prize / partner post на тиждень на локацію</li></ul></div></div></section>
-<section id="lugner"><div class="kicker">11 / Lugner City</div><h2>Окремі рекомендації</h2><ul class="lead"><li>Залишити game-based highlights — вони вже працюють</li><li>Додати системні highlights: Turniere, Anmeldung, Kalender, Gewinner</li><li>Закріпити Monthly Tournament Calendar</li><li>Підсилити CTA в bio</li><li>Більше фото людей між афішами — community proof для невеликої, але активної аудиторії</li><li>Зробити призові турніри видимими у highlights і pinned, якщо призи підтверджені</li></ul></section>
-<section id="millennium"><div class="kicker">12 / Millennium City</div><h2>Окремі рекомендації</h2><ul class="lead"><li><b>Терміново</b> розширити highlights — зараз це найбільша точка втрати аудиторії 2.2k</li><li>Винести турніри в окремий highlight, додати Games / Winners / FAQ / Join</li><li>Закріпити всі 3 ключові пости одразу</li><li>Використати велику аудиторію для social proof: переможці, команди, live atmosphere</li><li>Зробити профіль головною tournament arena мережі — він має для цього найкращі стартові дані</li></ul></section>
-<section id="mockup"><div class="kicker">13 / Visual Mockup</div><h2>Макет оновленого профілю</h2><p class="lead">Текстовий wireframe + рендер: верх профілю → highlights → перша сітка 3×3.</p><div class="mockup-wrap"><div class="phone"><div class="screen"><div class="ig-top">friendlyfire_arena</div><div class="ig-profile"><div class="ig-avatar"></div><div class="ig-stats"><div><b>113</b><span>posts</span></div><div><b>900+</b><span>followers</span></div><div><b>180</b><span>following</span></div></div></div><div class="ig-bio"><b>Gaming Arena Wien | Lugner City</b><br>Turniere · PS5 · High-End PCs<br>Allein, mit Freunden oder Squad<div class="cta-btn">📩 DM "TURNIER"</div></div><div class="ig-highlights"><div class="h"><div class="circ"></div><div class="lab">Turniere</div></div><div class="h"><div class="circ"></div><div class="lab">Join</div></div><div class="h"><div class="circ"></div><div class="lab">Kalender</div></div><div class="h"><div class="circ"></div><div class="lab">Gewinner</div></div><div class="h"><div class="circ"></div><div class="lab">Games</div></div><div class="h"><div class="circ"></div><div class="lab">FAQ</div></div></div><div class="ig-tabs"><div class="active">▦ Posts</div><div>▶ Reels</div><div>🏷 Tagged</div></div><div class="ig-grid"><div class="cell calendar">[1] Monthly<br>Calendar</div><div class="cell prize">[2] Rocket League<span class="tagmini">PRIZE</span></div><div class="cell atmo">[3] Atmosphere<br>Reel</div><div class="cell join">[4] How to<br>Join</div><div class="cell winner">[5] Winner<br>Recap</div><div class="cell announce">[6] CS2<br>Announcement</div><div class="cell faq">[7] FAQ:<br>Solo?</div><div class="cell lan">[8] LAN<br>Night</div><div class="cell prize">[9] Prize<br>Moment</div></div></div></div><div class="mockup-legend"><div class="li"><div class="num">1</div>Calendar carousel — закріплено, показує ритм місяця</div><div class="li"><div class="num">2</div>Featured tournament — призовий бейдж видно, але він не домінує</div><div class="li"><div class="num">3</div>Reel атмосфери — звук, люди, gameplay, без тексту-стіни</div><div class="li"><div class="num">4</div>Закріплений How to Join — знімає бар'єр одразу під calendar</div><div class="li"><div class="num">5</div>Winner recap — обличчя, не лише приз</div><div class="li"><div class="num">6</div>Анонс наступного турніру — гра, дата, формат</div><div class="li"><div class="num">7</div>FAQ-пост — «можна прийти самому?» — топ-запитання новачків</div><div class="li"><div class="num">8</div>LAN/community — підтверджує, що це не разова подія</div><div class="li"><div class="num">9</div>Prize Moment — завершує перший екран соціальним доказом і стимулом участі</div></div></div></section>
+Zur Anmeldung: Schreib uns „TURNIER" per DM.</div>
+    </div>
+  </div>
+</section>
+
+<section id="stories">
+  <div class="kicker">08 / Stories Flow</div>
+  <h2>Промо-цикл одного турніру</h2>
+  <div class="flow">
+    <div class="step"><div class="t">T-7</div><ul><li>announcement</li><li>гра, дата</li><li>формат</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="t">T-5</div><ul><li>правила</li><li>хто може брати участь</li><li>solo/squad</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="t">T-3</div><ul><li>trend Reel</li><li>нагадування про формат</li><li>countdown sticker</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="t">T-1</div><ul><li>last call</li><li>«ще трохи місць»</li><li>DM CTA</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="t">Event day</div><ul><li>сетап, атмосфера</li><li>учасники, staff</li><li>gameplay clips</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="t">T+1</div><ul><li>переможці</li><li>recap</li><li>next tournament CTA</li></ul></div>
+  </div>
+</section>
+
+<section id="visual">
+  <div class="kicker">09 / Візуальна система</div>
+  <h2>Кольорова логіка та правила</h2>
+  <p class="lead">Поточні турнірні афіші вже стилістично "gaming" — темний фон, червоний акцент. Проблема не в стилі, а в нечіткості: незрозуміло, коли і як долучитись. Рішення — закодувати функцію кольором, а не лише настроєм.</p>
+  <div class="swatch-row">
+    <div class="swatch"><div class="box" style="background:var(--red)"></div><div class="lab">Red/Black — official tournament announcement</div></div>
+    <div class="swatch"><div class="box" style="background:#FFFFFF"></div><div class="lab">White — registration / rules / FAQ</div></div>
+    <div class="swatch"><div class="box" style="background:#000000"></div><div class="lab">Black — brand base / profile background</div></div>
+    <div class="swatch"><div class="box" style="background:#26262c"></div><div class="lab">Dark grey — bracket / scoreboard</div></div>
+    <div class="swatch"><div class="box" style="background:#FFFFFF"></div><div class="lab">White — headline / contrast blocks</div></div>
+  </div>
+  <h3>Правила застосування</h3>
+  <ul class="lead">
+    <li>Highlights covers — одна іконка-стиль для всього сету (не змішувати фото з іконками)</li>
+    <li>Турнірні афіші — завжди гра + дата на першому плані, без сторонніх кольорів і зайвих декоративних бейджів</li>
+    <li>Carousel-обкладинки — заголовок одним реченням, без підзаголовків на 1-му слайді</li>
+    <li>Winner-пости — завжди людина в кадрі, не лише результат</li>
+    <li>Окремий колірний/іконковий маркер для кожної гри (Fortnite / CS2 / Valorant / Rocket League), щоб сітка читалась системно</li>
+  </ul>
+</section>
+
+<section id="lugner">
+  <div class="kicker">10 / Lugner City</div>
+  <h2>Окремі рекомендації</h2>
+  <ul class="lead">
+    <li>Залишити game-based highlights — вони вже працюють</li>
+    <li>Додати системні highlights: Turniere, Anmeldung, Kalender, Gewinner</li>
+    <li>Закріпити Monthly Tournament Calendar</li>
+    <li>Підсилити CTA в bio (зараз менша аудиторія — кожен новий контакт цінніший)</li>
+    <li>Більше фото людей між афішами — community proof для невеликої, але активної аудиторії</li>
+    <li>Додати більше Reels між афішами: staff moments, live gameplay, реакції учасників, короткі trend-формати</li>
+  </ul>
+</section>
+
+<section id="millennium">
+  <div class="kicker">11 / Millennium City</div>
+  <h2>Окремі рекомендації</h2>
+  <ul class="lead">
+    <li><b>Терміново</b> розширити highlights — зараз це найбільша точка втрати аудиторії 2.2k</li>
+    <li>Винести турніри в окремий highlight, додати Games / Winners / FAQ / Join</li>
+    <li>Закріпити всі 3 ключові пости одразу</li>
+    <li>Використати велику аудиторію для social proof: переможці, команди, live atmosphere</li>
+    <li>Зробити профіль головною "tournament arena" мережі — він має для цього найкращі стартові дані</li>
+  </ul>
+</section>
+
+<section id="mockup">
+  <div class="kicker">12 / Visual Mockup</div>
+  <h2>Макет оновленого профілю</h2>
+  <p class="lead">Текстовий wireframe + рендер: верх профілю → highlights → перша сітка 3×3.</p>
+
+  <div class="mockup-wrap">
+    <div class="phone">
+      <div class="screen">
+        <div class="ig-top">friendlyfire_arena</div>
+        <div class="ig-profile">
+          <div class="ig-avatar"></div>
+          <div class="ig-stats">
+            <div><b>113</b><span>posts</span></div>
+            <div><b>900+</b><span>followers</span></div>
+            <div><b>180</b><span>following</span></div>
+          </div>
+        </div>
+        <div class="ig-bio">
+          <b>Gaming Arena Wien | Lugner City</b><br>
+          Turniere · PS5 · High-End PCs<br>
+          Allein, mit Freunden oder Squad
+          <div class="cta-btn">📩 DM "TURNIER"</div>
+        </div>
+        <div class="ig-highlights">
+          <div class="h"><div class="circ"></div><div class="lab">Turniere</div></div>
+          <div class="h"><div class="circ"></div><div class="lab">Join</div></div>
+          <div class="h"><div class="circ"></div><div class="lab">Kalender</div></div>
+          <div class="h"><div class="circ"></div><div class="lab">Gewinner</div></div>
+          <div class="h"><div class="circ"></div><div class="lab">Games</div></div>
+          <div class="h"><div class="circ"></div><div class="lab">FAQ</div></div>
+        </div>
+        <div class="ig-tabs"><div class="active">▦ Posts</div><div>▶ Reels</div><div>🏷 Tagged</div></div>
+        <div class="ig-grid">
+          <div class="cell calendar">[1] Monthly<br>Calendar</div>
+          <div class="cell trend">[2] Trend<br>Reel</div>
+          <div class="cell atmo">[3] Atmosphere<br>Reel</div>
+          <div class="cell announce">[4] Tournament<br>Announcement</div>
+          <div class="cell join">[5] How to<br>Join Reel</div>
+          <div class="cell announce">[6] CS2<br>Announcement</div>
+          <div class="cell winner">[7] Winner<br>Recap Reel</div>
+          <div class="cell lan">[8] LAN<br>Night Reel</div>
+          <div class="cell reel">[9] Game<br>Spotlight</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mockup-legend">
+      <div class="li"><div class="num">1</div>Calendar carousel — закріплено, показує ритм місяця</div>
+      <div class="li"><div class="num">2</div>Trend Reel — короткий формат під охоплення, без перевантаження текстом</div>
+      <div class="li"><div class="num">3</div>Reel атмосфери — звук, люди, gameplay, без тексту-стіни</div>
+      <div class="li"><div class="num">4</div>Анонс турніру — гра, дата, формат, DM CTA</div>
+      <div class="li"><div class="num">5</div>How to Join Reel — пояснює участь за 10-20 секунд</div>
+      <div class="li"><div class="num">6</div>Анонс наступного турніру — гра, дата, формат</div>
+      <div class="li"><div class="num">7</div>Winner recap Reel — social proof після події</div>
+      <div class="li"><div class="num">8</div>LAN/community Reel — підтверджує, що це не разова подія</div>
+      <div class="li"><div class="num">9</div>Game Spotlight Reel — підсвічує конкретну гру й мотивує прийти</div>
+    </div>
+  </div>
+</section>
+
 </div>
+
 <footer>Friendly Fire Vienna · Instagram Restructuring Proposal · Lugner City × Millennium City</footer>
+
 </body>
 </html>
